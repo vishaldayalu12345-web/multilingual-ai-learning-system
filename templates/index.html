@@ -15,19 +15,31 @@
     <form method="POST">
       <label>Enter Text:</label><br />
 
-      <textarea name="text" rows="5" cols="50"></textarea>
+      <textarea name="text" rows="5" cols="50">{{ text }}</textarea>
 
       <br /><br />
 
       <label>Source Language:</label>
 
       <select name="source_language">
-        <option>English</option>
-        <option>Kannada</option>
-        <option>Marathi</option>
-        <option>Telugu</option>
-        <option>Hindi</option>
-        <option>Punjabi</option>
+        <option {% if source_language == "English" %}selected{% endif %}>
+    English
+</option>
+        <option {% if source_language == "Kannada" %}selected{% endif %}>
+    Kannada
+</option>
+        <option {% if source_language == "Marathi" %}selected{% endif %}>
+    Marathi
+</option>
+        <option {% if source_language == "Telugu" %}selected{% endif %}>
+    Telugu
+</option>
+        <option {% if source_language == "Hindi" %}selected{% endif %}>
+    Hindi
+</option>
+        <option {% if source_language == "Punjabi" %}selected{% endif %}>
+    Punjabi
+</option>
       </select>
 
       <br /><br />
@@ -35,12 +47,24 @@
       <label>Target Language:</label>
 
       <select name="target_language">
-        <option>English</option>
-        <option>Kannada</option>
-        <option>Marathi</option>
-        <option>Telugu</option>
-        <option>Hindi</option>
-        <option>Punjabi</option>
+        <option {% if target_language == "English" %}selected{% endif %}>
+    English
+</option>
+        <option {% if target_language == "Kannada" %}selected{% endif %}>
+    Kannada
+</option>
+        <option {% if target_language == "Marathi" %}selected{% endif %}>
+    Marathi
+</option>
+        <option {% if target_language == "Telugu" %}selected{% endif %}>
+    Telugu
+</option>
+        <option {% if target_language == "Hindi" %}selected{% endif %}>
+    Hindi
+</option>
+        <option {% if target_language == "Punjabi" %}selected{% endif %}>
+    Punjabi
+</option>
       </select>
 
       <br /><br />
